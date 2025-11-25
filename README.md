@@ -1,2 +1,6 @@
 # Digit-Manip
-A library I've created for myself to help me concatenate digits of a number without using strings.
+A C++ Library who's main purpose is solving problems on numbers 
+that would typically require string concatenation.
+In its current state, it holds for most solutions, however it falls short in many cases 
+due to the use of the pow() function from the Cmath library. I have a solution in progress
+that will allow to raise numbers to powers without the use of the cmath header file at all.
