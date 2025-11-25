@@ -14,20 +14,20 @@ int length(int num){
         for(int i = num; i != 0; i /= 10){
                 count += 1;
         }
-        return count; // returns the length of the given number
+        return count; 
 }
 
 vector<int> square_vector(vector<int> arr){
         for(int i = 0; i < arr.size(); i++){
                 arr[i] *= arr[i];
         }
-        return arr; // squares all the digits in a vector(array)
+        return arr; 
 }
 
 int extract_digit(int num){
         int len = length(num);
         int dig = num / pow(10, len - 1);
-        return dig; // extracts a singular digit from a number
+        return dig; 
 }
 
 vector<int> extract_digits(vector<int> arr){
@@ -40,7 +40,7 @@ vector<int> extract_digits(vector<int> arr){
                         arr[i] -= dig * pow(10, len - 1);
                 }
         }
-        return new_arr; // Extracts all digits from all numbers in the given array, and places them in a new array
+        return new_arr; 
 }
 
 int square_digit(int num){
@@ -51,15 +51,15 @@ int square_digit(int num){
         for(int i = 0; i < n; i++){
                 answer += arr[i] * pow(10, n - (i + 1));
         }
-        return answer; // Essentially works in lieu of string concatenation and conversion for int types.
+        return answer; 
 }
 
 int main(void){
         // testing
-        cout << square_digit(765) << endl;
-        cout << square_digit(3212) << endl;
-        cout << square_digit(0) << endl;
-        cout << square_digit(13579) << endl;
+        cout << square_digit(765) << endl; // Returns 493625
+        cout << square_digit(3212) << endl; // returns 9414
+        cout << square_digit(0) << endl; // returns 0
+        cout << square_digit(13579) << endl; // returns 19254981
         return 0;
 
 }
