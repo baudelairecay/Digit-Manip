@@ -2,20 +2,20 @@
 #include "Digmanip.h"
 
 using namespace std;
-
+//int digit_sum(int num){
+   // int sum = 0;
+   // while(num > 0){
+     //   sum += (num % 10);
+       // num /= 10;
+    //}
+    //return sum;
+//}
 void print(vector<int> arr){
         for(int i = 0; i < arr.size(); i++){
                 cout << arr[i] << endl;
         }
 }
 
-int length(int num){
-        int count = 0;
-        for(int i = num; i != 0; i /= 10){
-                count += 1;
-        }
-        return count; 
-}
 
 vector<int> square_vector(vector<int> arr){
         for(int i = 0; i < arr.size(); i++){
@@ -25,8 +25,7 @@ vector<int> square_vector(vector<int> arr){
 }
 
 int extract_digit(int num){
-        int len = length(num);
-        int dig = num / pow(10, len - 1);
+        int dig = num % 10;
         return dig; 
 }
 
@@ -36,8 +35,7 @@ vector<int> extract_digits(vector<int> arr){
                 while(arr[i] > 0){
                         int dig = extract_digit(arr[i]);
                         new_arr.push_back(dig);
-                        int len = length(arr[i]);
-                        arr[i] -= dig * pow(10, len - 1);
+                        arr[i] /= 10;
                 }
         }
         return new_arr; 
@@ -56,10 +54,11 @@ int square_digit(int num){
 
 int main(void){
         // testing
-        cout << square_digit(765) << endl; // Returns 493625
-        cout << square_digit(3212) << endl; // returns 9414
-        cout << square_digit(0) << endl; // returns 0
-        cout << square_digit(13579) << endl; // returns 19254981
+       // cout << square_digit(765) << endl; // Returns 493625
+        //cout << square_digit(3212) << endl; // returns 9414
+        //cout << square_digit(0) << endl; // returns 0
+        //cout << square_digit(13579) << endl; // returns 19254981
+        print(square_vector(extract_digits({47, 51})));
         return 0;
 
 }
