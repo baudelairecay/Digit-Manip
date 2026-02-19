@@ -16,7 +16,6 @@ void print(vector<int> arr){
         }
 }
 
-
 vector<int> square_vector(vector<int> arr){
         for(int i = 0; i < arr.size(); i++){
                 arr[i] *= arr[i];
