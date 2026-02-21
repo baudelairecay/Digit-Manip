@@ -24,7 +24,7 @@ void print(vector<int> arr){
 }
 
 int main(void){
-        // testing
+        // "testing"
         cout << square_digit(765) << endl; // Returns 493625
         cout << square_digit(3212) << endl; // returns 9414
         cout << square_digit(0) << endl; // returns 0
