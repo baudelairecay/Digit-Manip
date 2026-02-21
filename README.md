@@ -4,7 +4,7 @@ that would typically require string concatenation.
 In its current state, it holds for most numbers.
 
 
-# Issue(s) Identified:
+## Issue(s) Identified:
 
 1. 
 Length function only works for numbers that do not have a leading zero
@@ -15,7 +15,7 @@ a few cases that it didn't end up working, to save myself some time I am going t
 spend the next few days writing up unit tests to prevent any further frustration.
 
 
-# Unimportant fixes/Preference:
+## Unimportant fixes/Preference:
 1. 
 I'd like the square vector function to modify vectors in place to save space.
 Its totally unnecessary, but I feel like at this point optimizing a few things may be 
